@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -14,25 +15,23 @@ export default function Home() {
         const heroHeight = heroRef.current.offsetHeight;
         const scrollPosition = window.scrollY;
 
-        // Add some threshold for better UX
         if (scrollPosition > heroHeight - 80) {
-          !isScrolled && setIsScrolled(true);
+          setIsScrolled(true);
         } else {
-          isScrolled && setIsScrolled(false);
+          setIsScrolled(false);
         }
 
-        // Show scroll-to-top button after scrolling past hero
         if (scrollPosition > heroHeight) {
-          !showScrollTop && setShowScrollTop(true);
+          setShowScrollTop(true);
         } else {
-          showScrollTop && setShowScrollTop(false);
+          setShowScrollTop(false);
         }
       }
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [isScrolled, showScrollTop]);
+  }, []); // This is fine as it's just a scroll listener
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -70,7 +69,7 @@ export default function Home() {
           >
             <div className="flex items-center justify-between lg:grid lg:grid-cols-3">
               {/* Logo */}
-              <a
+              <Link
                 href="/"
                 className="flex items-center hover:opacity-80 transition-opacity"
               >
@@ -93,7 +92,7 @@ export default function Home() {
                   <span className="text-white">FART</span>
                   <span className="text-emerald-500">DAO</span>
                 </div>
-              </a>
+              </Link>
 
               {/* Social Media Icons - Centered */}
               <div className="hidden md:flex items-center justify-center gap-6">
@@ -289,7 +288,7 @@ export default function Home() {
           >
             <div className="flex items-center justify-between lg:grid lg:grid-cols-3">
               {/* Logo */}
-              <a
+              <Link
                 href="/"
                 className="flex items-center hover:opacity-80 transition-opacity"
               >
@@ -312,7 +311,7 @@ export default function Home() {
                   <span className="text-white">FART</span>
                   <span className="text-emerald-500">DAO</span>
                 </div>
-              </a>
+              </Link>
 
               {/* Social Media Icons - Centered */}
               <div className="hidden md:flex items-center justify-center gap-6">
@@ -503,7 +502,7 @@ export default function Home() {
         <div className="container mx-auto px-4 py-16 md:py-32">
           <div className="max-w-6xl mx-auto text-center">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 font-mono tracking-wider px-4">
-              Breathe Deep. It's{" "}
+              Breathe Deep. It&apos;s{" "}
               <span className="text-emerald-500">FARTDAO</span> Time
             </h2>
             <p className="text-gray-400 text-lg md:text-xl max-w-3xl mx-auto mb-16 px-4">
@@ -599,9 +598,9 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold mb-4">Strategy</h3>
                 <p className="text-gray-400">
-                  Not just collecting for laughs—we're tracking trends, making
-                  calculated moves, and shaping the memeconomy one $FART at a
-                  time.
+                  Not just collecting for laughs—we&apos;re tracking trends,
+                  making calculated moves, and shaping the memeconomy one $FART
+                  at a time.
                 </p>
               </div>
 
@@ -721,7 +720,7 @@ export default function Home() {
                       Limited WL Access
                     </h3>
                     <p className="text-gray-400">
-                      Early entry for OG Farters. We're keeping it small,
+                      Early entry for OG Farters. We&apos;re keeping it small,
                       smelly, and powerful — with exclusive whitelist drops for
                       active community members.
                     </p>
@@ -760,8 +759,8 @@ export default function Home() {
                       Meme-Driven Culture
                     </h3>
                     <p className="text-gray-400">
-                      We don’t just build — we meme, we engage, and we fart with
-                      purpose. Fart DAO is where humor meets utility.
+                      We don&apos;t just build — we meme, we engage, and we fart
+                      with purpose. Fart DAO is where humor meets utility.
                     </p>
                   </div>
                 </div>
@@ -791,8 +790,9 @@ export default function Home() {
                       Low MCAP Launch
                     </h3>
                     <p className="text-gray-400">
-                      We’re starting lean so the community can grow organically.
-                      No VC dumps — just pure gas from the ground up.
+                      We&apos;re starting lean so the community can grow
+                      organically. No VC dumps — just pure gas from the ground
+                      up.
                     </p>
                   </div>
                 </div>
@@ -1062,8 +1062,8 @@ export default function Home() {
                     Get in <span className="text-emerald-500">Touch</span>
                   </h2>
                   <p className="text-gray-400 text-xl leading-relaxed">
-                    Have a question? Send us a message and we’ll get back to you
-                    soon.
+                    Have a question? Send us a message and we&apos;ll get back
+                    to you soon.
                   </p>
 
                   {/* Logo and Title */}
