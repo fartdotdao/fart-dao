@@ -121,7 +121,7 @@ export default function Home() {
                   </svg>
                 </a>
                 <a
-                  href="https://www.daos.fun/"
+                  href="https://www.daos.fun/DAht43MBqJzyJkKFiqfJZi4oMrYcRe396UF98eLRdaos"
                   className="text-gray-400 hover:text-emerald-500 transition-all duration-300 hover:scale-110"
                 >
                   <svg
@@ -262,7 +262,7 @@ export default function Home() {
                     </svg>
                   </a>
                   <a
-                    href="https://www.daos.fun/"
+                    href="https://www.daos.fun/DAht43MBqJzyJkKFiqfJZi4oMrYcRe396UF98eLRdaos"
                     className="text-gray-400 hover:text-emerald-500 transition-all duration-300 hover:scale-110"
                   >
                     <svg
@@ -340,7 +340,7 @@ export default function Home() {
                   </svg>
                 </a>
                 <a
-                  href="https://www.daos.fun/"
+                  href="https://www.daos.fun/DAht43MBqJzyJkKFiqfJZi4oMrYcRe396UF98eLRdaos"
                   className="text-gray-400 hover:text-emerald-500 transition-all duration-300 hover:scale-110"
                 >
                   <svg
@@ -1369,7 +1369,7 @@ export default function Home() {
                       </svg>
                     </a>
                     <a
-                      href="https://www.daos.fun/"
+                      href="https://www.daos.fun/DAht43MBqJzyJkKFiqfJZi4oMrYcRe396UF98eLRdaos"
                       className="text-gray-400 hover:text-emerald-500 transition-all duration-300 hover:scale-110"
                     >
                       <svg
